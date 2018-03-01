@@ -10,4 +10,6 @@ public interface StudentService {
 	List<StudentModel> selectAllStudents();
 	
 	void addStudent(StudentModel student);
+
+	String deleteStudent(String string);
 }

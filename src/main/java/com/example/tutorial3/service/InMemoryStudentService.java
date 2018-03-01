@@ -25,4 +25,17 @@ public abstract class InMemoryStudentService implements StudentService {
 	public void addStudent(StudentModel student) {
 		studentList.add(student);
 	}
+	
+	@Override
+	public String deleteStudent(String npm) {
+		String result = "";
+		for (StudentModel student : studentList) {
+			if (npm.equals(student.getNpm())) {
+				studentList.remove(student);
+				result = "success";
+				break;
+			} 
+		}
+		return result;
+	}
 }
